@@ -48,5 +48,28 @@ public class Perecedero extends Producto implements Ordenable{
 		System.out.println("\n"+contB+" 	Perecederos:		subtotalA  $$$$$$ "+orden);
 		return orden;
 	}
-
-}
+	@Override
+	public double calcularTotal(ArrayList<Producto> n) {
+		int contB=0,contA=0;
+		double orden=0,pA=0,pB=0;
+		System.out.println("\n###### Orden de compras ####### ");
+		System.out.println(" Un. x  Producto    		 costo");
+		for(Producto e: n) {
+			if(e instanceof Perecedero) {
+				System.out.println(" 1  	"+e.nombre+" 				$ "+e.precio+" +");
+				orden=orden+e.precio;
+				contA=contA+1;
+				pA=pA+e.precio;
+			}
+			if(e instanceof NoPerecedero) {
+				System.out.println(" 1  	"+e.nombre+" 				$ "+e.precio+" +");
+				orden=orden+e.precio;
+				contB=contB+1;
+				pB=pB+e.precio;
+			}
+			
+		} //FIN FOR
+	
+	} //FIN METODO 
+	
+} //FIN CLASE
