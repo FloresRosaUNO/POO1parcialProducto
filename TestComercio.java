@@ -1,3 +1,5 @@
+/*Comprobar el correcto funcionamiento en el método main() de la clase TestComercio. En dicha clase solo
+deben existir las instancias a objetos y llamada a métodos, sin resolver el problema aquí.*/
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
